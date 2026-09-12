@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit.v3" Version="3.1.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="../Models/*.cs" Link="Models/%(Filename)%(Extension)" />
+
+    <Compile Include="../Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+
+    <Compile Include="../Handlers/*.cs" Link="Handlers/%(Filename)%(Extension)" />
+
+    <Compile Include="../Store/*.cs" Link="Store/%(Filename)%(Extension)" />
+    
+    <Compile Include="../Serialization/*.cs" Link="Serialization/%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
